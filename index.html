@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mansoor Protocol — Launcher</title>
+  ...
+<h1>Mansoor Protocol — Launcher</h1>
+<p class="lead">One click to copy the current activation script, then open your AI chat.</p>
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 24px; line-height: 1.5; }
     .wrap { max-width: 780px; margin: 0 auto; }
@@ -18,6 +21,8 @@
     pre { overflow: auto; background: #f8fafc; padding: 12px; border-radius: 12px; border: 1px solid #e5e7eb; }
     footer { margin-top: 32px; font-size: 13px; opacity: 0.7;}
     ul { margin-top: 8px; }
+    .note { font-size: 13px; opacity:.8; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
   </style>
 </head>
 <body>
@@ -32,26 +37,42 @@
         <button id="viewBtn" class="ghost">View Script</button>
       </div>
       <div id="status" style="margin-top:10px; font-size:14px;"></div>
+      <p class="note">Why not auto-paste? Browsers prevent pages from inserting text into other websites for safety. 
+      The best workaround is the <em>bookmarklet</em> below, which you click <em>on</em> the chat page to auto-fill the box.</p>
     </div>
 
     <div class="card">
       <strong>Step 2 — Open your AI</strong>
-      <div class="row">
+      <div class="grid">
         <a class="btn ghost" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT</a>
         <a class="btn ghost" href="https://claude.ai/new" target="_blank" rel="noopener">Open Claude</a>
+        <a class="btn ghost" href="https://gemini.google.com/app" target="_blank" rel="noopener">Open Gemini</a>
+        <a class="btn ghost" href="https://poe.com/" target="_blank" rel="noopener">Open Poe</a>
+      </div>
+      <p class="note">Start a new chat, then paste. Or use the bookmarklet below to auto-insert.</p>
       </div>
       <p style="font-size:13px; opacity:.75; margin-top:10px;">Start a new chat, paste, then ask your question in your own words.</p>
     </div>
 
     <details class="card" open>
-      <summary><strong>What’s a bookmarklet? (optional tool)</strong></summary>
-      <p>A <em>bookmarklet</em> is a normal browser bookmark that runs a tiny bit of code when you click it. Here, it will pull the latest Mansoor Protocol activation script and place it into the message box of a new ChatGPT/Claude chat—so you don’t need to paste manually.</p>
-      <p><strong>How to use</strong></p>
+           <summary><strong>What’s a bookmarklet? (optional tool)</strong></summary>
+      <p>A <em>bookmarklet</em> is a normal browser bookmark that runs a tiny bit of code when you click it. 
+      Here, it will pull the latest Mansoor Protocol activation script and place it into the message box of a new ChatGPT/Claude/Gemini/Poe chat—so you don’t need to paste manually.</p>
+
+      <p><strong>How to add it</strong></p>
       <ul>
-        <li><strong>Add it:</strong> Copy the code below. Create a new browser bookmark, paste the code into the URL/location field, and save.</li>
-        <li><strong>Use it:</strong> Open a <em>new</em> chat in ChatGPT or Claude, then click the bookmark. It will insert the current script into the message box. Press Enter to activate.</li>
-        <li><strong>If blocked:</strong> Some pages may block auto-insert. In that case, the tool will show the script so you can copy/paste manually.</li>
+        <li>Copy the entire line of code below.</li>
+        <li>Create a new browser bookmark (Bookmarks → Add Bookmark).</li>
+        <li>Paste the code into the bookmark’s URL/Location field. Name it “Mansoor Protocol”. Save.</li>
       </ul>
+
+      <p><strong>How to use it</strong></p>
+      <ul>
+        <li>Open a <em>new</em> chat page in your AI (ChatGPT, Claude, Gemini, Poe).</li>
+        <li>Click the “Mansoor Protocol” bookmarklet. It will insert the current script into the chat box.</li>
+        <li>Press Enter to activate.</li>
+      </ul>
+
       <pre class="mono" id="bmCode"></pre>
     </details>
 
