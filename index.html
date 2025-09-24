@@ -84,14 +84,7 @@ async function copyScript() {
 }
 
 async function viewScript() {
-  try {
-    const text = await fetchScript();
-    const win = window.open("", "_blank", "noopener");
-    win.document.write(`<pre style='white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,monospace;'>${escapeHtml(text)}</pre>`);
-    win.document.close();
-  } catch (e) {
-    window.open(RAW_URL, "_blank", "noopener");
-  }
+  window.open(RAW_URL, "_blank", "noopener");
 }
 
 function escapeHtml(str){return str.replace(/[&<>"']/g, m=>({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;" }[m]))}
